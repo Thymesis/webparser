@@ -1,1 +1,1 @@
-CREATE TABLE proxy (ip INET PRIMARY KEY, port INTEGER CHECK (port > 0 AND port < 65536), type VARCHAR(10), date DATE);
+CREATE TABLE proxy (ip INET, port INTEGER CHECK (port > 0 AND port < 65536), type VARCHAR(10), date DATE, PRIMARY KEY (ip, port));
